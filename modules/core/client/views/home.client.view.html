@@ -1,0 +1,15 @@
+<section ng-controller="HomeController">
+    <div id="q" class="row" style="background-color: azure; margin-top:20%;height:200px;">
+    </div> 
+    <div class="row" style="background-color: azure; margin-top:2%; margin-bottom: 34%; height:200px;">
+    </div> 
+
+    <body  ng-app="ngAnimate" >
+        <p style="color:white;">Click me:</p><input type="checkbox" ng-model="checked">
+        <br/>
+        <div class="animate">
+            <img ng-show="checked" src="modules/core/client/img/brand/logo.png">
+            <img ng-hide="checked" src="modules/core/client/img/brand/favicon.ico">
+        </div>
+    </body>
+</section>

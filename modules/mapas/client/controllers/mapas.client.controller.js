@@ -72,14 +72,48 @@ angular.module('mapas').controller('MapasController', ['$scope', '$stateParams',
     // Find a list of Mapas
     $scope.find = function () {
       var map;
-      require(["esri/map", "dojo/domReady!"], function(Map) {
+      require(["esri/map", "esri/geometry/Circle", "esri/symbols/SimpleFillSymbol", 
+        "esri/graphic", "esri/layers/GraphicsLayer",
+        "dojo/dom", "dojo/dom-attr", "dojo/domReady!"], function(Map, Circle, SimpleFillSymbol, 
+        Graphic, GraphicsLayer, 
+        dom, domAttr) {
         map = new Map("map", {
-          center: [-118, 34.5],
-          zoom: 8,
-          basemap: "topo"
+          center: [-64.2, -31.41], // - |
+          zoom: 17,//13,
+          slider: false,
+          basemap: 'streets'//"gray" //topo
         });
+        var symbol = new SimpleFillSymbol().setColor(null).outline.setColor("blue");
+        var gl = new GraphicsLayer({ id: "circles" });
+        var geodesic = dom.byId("geodesic");
+        map.addLayer(gl);
+        console.log('map',map);
+        map.on('load',function(e){
+
+        });
+        map.on("click", function(e) {
+          console.log('point',e.mapPoint);
+          var radius = map.extent.getWidth() / 10;
+          var circle = new Circle({
+            center: e.mapPoint,//{x:-7146717.87773516,y:-3686105.9275120567},//map.mapPoint,//[-7146717.87773516,-3686105.9275120567],//e.mapPoint,
+            geodesic: domAttr.get(geodesic, "checked"),
+            radius: radius
+          });
+          var graphic = new Graphic(circle, symbol);
+          gl.add(graphic);
+        });
+      // require(["esri/geometry/Circle"], function(Circle) { 
+      //   new Circle([-63, -31],{
+      //     "radius": 20000
+      //   });
+      // });
+      // require(["esri/map", "esri/geometry/Circle"], function(Map, Circle){
+      //   var circleGeometry = new Circle([-117.15, 32.71],{
+      //     "radius": 2000
+      //   });
+      // });
+      // $scope.mapas = Mapas.query();
       });
-      $scope.mapas = Mapas.query();
     };
 
     // Find existing Mapa

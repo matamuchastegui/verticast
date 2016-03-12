@@ -1,0 +1,47 @@
+<section ng-controller="MapasController" ng-init="find()">
+  <div class="page-header">
+    <!-- <h1>Mapa</h1> -->
+  </div>
+  <style>
+      html, body, #map {
+        height: 100%; width: 100%; margin: 0; padding: 0; 
+      }
+      #controls {
+        background: #fff;
+        box-shadow: 0 6px 6px -6px #999;
+        color: #444;
+        font-family: sans-serif;
+        height: auto;
+        left: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 1em;
+        width: auto;
+        z-index: 40;
+      }
+      #controls div {
+        padding: 0 0 1em 0;
+      }
+    </style>
+  <div id="map"></div>
+    <div id="controls">
+      <div>Click the map.</div>
+      <input type="checkbox" id="geodesic">
+      <label for="geodesic">Geodesic?</label>
+    </div>
+  <!-- <div class="list-group">
+    <a ng-repeat="mapa in mapas" ui-sref="mapas.view({mapaId: mapa._id})" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="mapa.created | date:'mediumDate'"></span>
+        by
+        <span ng-bind="mapa.user.displayName"></span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="mapa.title"></h4>
+      <p class="list-group-item-text" ng-bind="mapa.content"></p>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="mapas.$resolved && !mapas.length">
+    No mapas yet, why don't you <a ui-sref="mapas.create">create one</a>?
+  </div> -->
+</section>

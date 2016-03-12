@@ -1,0 +1,40 @@
+/*@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}*/
+@keyframes fadeinphoto {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fadeinphoto {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.img {
+  width: 100%; }
+  .img img {
+    height: 100vh;
+    opacity: .5;
+    width: inherit; }
+  .img .writing {
+    position: absolute;
+    background: black;
+    margin-left: 27%;
+    margin-top: 10%;
+    font-size: 50px;
+    color: white; }
+    .img .writing .prompt {
+      animation: fadeinphoto 1s 0.5s infinite;
+      -moz-animation: fadeinphoto 1s 0.5s infinite;
+      -webkit-animation: fadeinphoto 1s 0.5s infinite;
+      -o-animation: fadeinphoto 1s 0.5s infinite; }

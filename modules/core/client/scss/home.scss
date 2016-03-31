@@ -1,9 +1,9 @@
-/*@mixin transition($transition...) {
+@mixin transition($transition...) {
     -moz-transition:    $transition;
     -o-transition:      $transition;
     -webkit-transition: $transition;
     transition:         $transition;
-}*/
+}
 @keyframes fadeinphoto {
     0% { opacity: 0; }
     50% { opacity: 1; }
@@ -26,6 +26,15 @@
     0% { opacity: 0; }
     50% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+.layer{
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: white;    
+  position: relative;
+  top: 800px;
 }
 
 .img{
@@ -51,3 +60,24 @@
     }
   }   
 } 
+/*.icon-box{
+  i:before{
+    color: #05D;
+  }
+}*/
+.icon-box:hover{
+
+  i{
+    @include transition(2s);
+    background-color: #05D;
+  }
+  i:before{
+    @include transition(2s);
+    color: white;
+  }
+}
+.contacto{
+  background: lightgray;
+  margin-top: 50px;
+  padding: 2%;
+}

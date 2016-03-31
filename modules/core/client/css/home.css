@@ -1,9 +1,3 @@
-/*@mixin transition($transition...) {
-    -moz-transition:    $transition;
-    -o-transition:      $transition;
-    -webkit-transition: $transition;
-    transition:         $transition;
-}*/
 @keyframes fadeinphoto {
   0% {
     opacity: 0; }
@@ -19,6 +13,14 @@
     opacity: 1; }
   100% {
     opacity: 0; } }
+
+.layer {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: white;
+  position: relative;
+  top: 800px; }
 
 .img {
   width: 100%; }
@@ -38,3 +40,23 @@
       -moz-animation: fadeinphoto 1s 0.5s infinite;
       -webkit-animation: fadeinphoto 1s 0.5s infinite;
       -o-animation: fadeinphoto 1s 0.5s infinite; }
+
+/*.icon-box{
+  i:before{
+    color: #05D;
+  }
+}*/
+.icon-box:hover i {
+  -webkit-transition: 2s;
+  transition: 2s;
+  background-color: #05D; }
+
+.icon-box:hover i:before {
+  -webkit-transition: 2s;
+  transition: 2s;
+  color: white; }
+
+.contacto {
+  background: lightgray;
+  margin-top: 50px;
+  padding: 2%; }

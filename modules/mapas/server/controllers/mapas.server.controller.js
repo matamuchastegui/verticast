@@ -39,7 +39,6 @@ getToken(function(token){
       studyAreas: '[{"geometry":{"x":-117.1956,"y":34.0572}}]'
     }
   }, function(error, response, body){
-    console.log('BODY',body);
   });
 });
 

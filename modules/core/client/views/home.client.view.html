@@ -7,44 +7,93 @@
     </video>
 </section> -->
 <section ng-controller="HomeController">
-    <div class="img">
+    <div class="img" style="position: fixed;">
         <p class="writing">What we do?<br/>
         {{text}}<span class="prompt">_</span> </p>
         <img src="/static/img/coffee.png">
     </div>
-    <div class="row text-center"><img ng-src="modules/core/client/img/brand/VerticastLogo.png"/></div>   
-    <div class="col-sm-3">
-    <div class="icon-box">
-        <!-- <i class="fa fa-cogs circle glyphicon glyphicon-user fa-4x text-theme"></i> -->
-        <h3 class="title-sm text-theme-sm text-theme">CUSTOMIZABLE</h3>
-        <p class="text-theme-sm">Lorem ipsum dolor sit amet, consectetur adipiscing
-        <br>sed diam</p>
+
+    <div class="layer">
+        <div class="row text-center" style="position: relative; margin-bottom: 40px">
+            <!-- <img ng-src="modules/core/client/img/brand/VerticastLogo.png"/> -->
+            <img ng-src="static/img/vm.jpg" style="width: 100%"/>
+            <p style="width: 100%;margin-top: -12%;position: absolute;font-size: 44px;font-family: CaviarDreams;">Servicio Tecnico Especializado</p>
+        </div>   
+
+        <div class="row text-center">
+            <div class="col-sm-3">
+            <div class="icon-box">
+                <i class="fa fa-cogs fa-round fa-4x text-theme circle glyphicon glyphicon-cog"></i>
+                <h3 class=" title-sm text-theme-sm text-theme">Reparación</h3>
+                <p class="text-theme-sm ">Cambio de Pantallas, Testeos, Software, Liberacion, Soldaduras, Pin de Carga, Sacamos Codigos.</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+            <div class="icon-box">
+                <i class="fa fa-cogs fa-round fa-4x text-theme circle glyphicon glyphicon-shopping-cart"></i>
+                <h3 class=" title-sm text-theme-sm text-theme">Accesorios en Gral</h3>
+                <p class="text-theme-sm ">Films, Vidrios Templados, Fundas, Cargadores, Memorias, Pen Drive, Baterias.</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+            <div class="icon-box">
+                <i class="fa fa-cogs fa-round fa-4x text-theme circle glyphicon glyphicon-globe"></i>
+                <h3 class=" title-sm text-theme-sm text-theme">Páginas Web</h3>
+                <p class="text-theme-sm ">Desarrollo de páginas y aplicaciones web, comenzando por el análisis de tu negocio para lograr una estrategía que logre sacarle el mayor provecho a tu sitio web.</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+            <div class="icon-box">
+                <i class="fa fa-cogs fa-4x text-theme circle glyphicon glyphicon-phone"></i>
+                <h3 class=" title-sm text-theme-sm text-theme">Aplicaciones Móbiles</h3>
+                <p class="text-theme-sm ">Desarrollo de Apps personalizadas para tu empresa.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row contacto ">
+            <div class="col-md-3">
+                <h1>Contacto</h1>
+                <p>Para contactarnos o hacer preguntas no dudes en escribirnos tu consulta en el formulario de la derecha.</p>
+            </div>
+            <div class="col-md-9">
+                
+                <form name="articleForm" class="form-horizontal" ng-submit="create(articleForm.$valid)" novalidate>
+                  <fieldset>
+                    <div class="form-group" show-errors>
+                      <label for="nombre">Nombre</label>
+                      <input name="nombre" type="text" ng-model="nombre" id="nombre" class="form-control" placeholder="Su Nombre" >
+                     
+                    </div>
+                    <div class="form-group" show-errors>
+                      <label for="email">e-mail</label>
+                      <input name="email" type="email" ng-model="email" id="email" class="form-control" placeholder="Dirección de e-mail" required>
+                      <div ng-messages="articleForm.email.$error" role="alert">
+                        <p class="help-block error-text" ng-message="required">El e-mail es requerido</p>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="content">Consulta</label>
+                      <textarea name="content" ng-model="content" id="content" class="form-control" cols="30" rows="10" placeholder="Consulta" required></textarea>
+                       <div ng-messages="articleForm.nombre.$error" role="alert">
+                        <p class="help-block error-text" ng-message="required">La consulta es requerida</p>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-default">
+                    </div>
+                    <div ng-show="error" class="text-danger">
+                      <strong ng-bind="error"></strong>
+                    </div>
+                    <div ng-show="message" class="text-success">
+                      <strong ng-bind="message"></strong>
+                    </div>
+                  </fieldset>
+                </form>
+            </div>
         </div>
     </div>
-    <div class="col-sm-3">
-    <div class="icon-box">
-        <i class="fa fa-cogs fa-round fa-4x text-theme"></i>
-        <h3 class="title-sm text-theme-sm text-theme">CUSTOMIZABLE</h3>
-        <p class="text-theme-sm">Lorem ipsum dolor sit amet, consectetur adipiscing
-        <br>sed diam</p>
-        </div>
-    </div>
-    <div class="col-sm-3">
-    <div class="icon-box">
-        <i class="fa fa-cogs fa-round fa-4x text-theme"></i>
-        <h3 class="title-sm text-theme-sm text-theme">CUSTOMIZABLE</h3>
-        <p class="text-theme-sm">Lorem ipsum dolor sit amet, consectetur adipiscing
-        <br>sed diam</p>
-        </div>
-    </div>
-    <div class="col-sm-3">
-    <div class="icon-box">
-        <i class="fa fa-cogs fa-round fa-4x text-theme"></i>
-        <h3 class="title-sm text-theme-sm text-theme">CUSTOMIZABLE</h3>
-        <p class="text-theme-sm">Lorem ipsum dolor sit amet, consectetur adipiscing
-        <br>sed diam</p>
-        </div>
-    </div>
+
+    
     <!--
     <div id="q" class="row text-center" style="background-color: azure; margin-top:20%;height:200px;">
     </div> 

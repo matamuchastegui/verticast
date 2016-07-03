@@ -99,10 +99,14 @@ header{
     opacity: 1;
   }
 }
+.padding{
+  padding-left: 10%;
+  padding-right: 10%;
+}
 footer{
   clear: both;
   position: relative;
-  margin-top: 58%;
+  top: 800px;
   .social{
     @include transition(2s);
     height: 80px;
@@ -207,7 +211,4 @@ footer{
       font-size: 60px;
     }
   }
-}
-.mt50{
-  margin-top: 50px;
 }

@@ -76,10 +76,14 @@ header {
   header a {
     opacity: 1; }
 
+.padding {
+  padding-left: 10%;
+  padding-right: 10%; }
+
 footer {
   clear: both;
   position: relative;
-  margin-top: 58%; }
+  top: 800px; }
   footer .social {
     -webkit-transition: 2s;
     transition: 2s;
@@ -181,6 +185,3 @@ footer {
       background: #007bb5;
       color: white;
       font-size: 60px; }
-
-.mt50 {
-  margin-top: 50px; }

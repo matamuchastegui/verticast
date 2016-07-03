@@ -40,7 +40,7 @@
 </head>
 
 <body class="ng-cloak" >
-  <!-- <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header> -->
+  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
   <section class="">
     <section> <!-- style="background-image: url(modules/core/client/img/themes/bridge.jpg);"-->
       {% block content %}{% endblock %}
@@ -51,16 +51,18 @@
   <script type="text/javascript">
     var user = {{ user | json | safe }};
   </script>
-  
+
   <!--Load The Socket.io File-->
   <script type="text/javascript" src="/socket.io/socket.io.js"></script>
 
   <!--Application JavaScript Files-->
-  {% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>{% endfor %} 
+
+  {% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>{% endfor %}
   <script src="https://js.arcgis.com/3.15/"></script>
+<script src="lib/angular-scroll/angular-scroll.js"></script>
   {% if livereload %}
   <!--Livereload script rendered -->
-  <script type="text/javascript" src="{{host}}:35729/livereload.js"></script>
+  <script type="text/javascript" src="{{host}}:1337/livereload.js"></script>
   {% endif %}
 </body>
 

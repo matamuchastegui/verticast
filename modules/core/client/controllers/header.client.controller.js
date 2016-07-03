@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', '$state', 'Authentication', 'Menus',
-  function ($scope, $state, Authentication, Menus) {
+angular.module('core').controller('HeaderController', ['$scope', '$state', '$document', 'Authentication', 'Menus', '$window',
+  function ($scope, $state, $document, Authentication, Menus, $window) {
     // Expose view variables
     $scope.$state = $state;
     $scope.authentication = Authentication;
@@ -19,5 +19,15 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
     $scope.$on('$stateChangeSuccess', function () {
       $scope.isCollapsed = false;
     });
+
+    $scope.scrollTop = function(){
+      $document.scrollTopAnimated(0, 1000);
+    };
+
+    $scope.scrollTo = function(item){
+      var someElement = angular.element(document.getElementById(item));
+      $document.scrollToElement(someElement, 50, 1000);
+    };
+
   }
-]);
+]).value('duScrollBottomSpy', true);

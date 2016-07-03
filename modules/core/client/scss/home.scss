@@ -32,7 +32,7 @@
   height: 100%;
   width: 100%;
   display: block;
-  background-color: white;    
+  background-color: white;
   position: relative;
   top: 800px;
 }
@@ -58,8 +58,8 @@
       -webkit-animation: fadeinphoto 1s .5s infinite;
       -o-animation: fadeinphoto 1s .5s infinite;
     }
-  }   
-} 
+  }
+}
 /*.icon-box{
   i:before{
     color: #05D;
@@ -77,7 +77,24 @@
   }
 }
 .contacto{
-  background: lightgray;
+  background: rgba(67, 74, 117, 1);
+  color:white;
   margin-top: 50px;
   padding: 2%;
+  padding-bottom: 15%;
+}
+.row.text-justify{
+  border-top: solid #555 1px;
+  padding:2%;
+  img{
+    width: 100%;
+  }
+}
+header{
+  opacity: .5;
+  background: #ec2121 !important;
+  border: none !important;
+  a{
+    opacity: 1;
+  }
 }

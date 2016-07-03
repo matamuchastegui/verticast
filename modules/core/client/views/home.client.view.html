@@ -1,68 +1,128 @@
 
-    
-<!-- <section class="video">
+
+<!--  <section class="video">
     <video class="col-xs-12" autoplay loop muted>
-      <source src="/static/videos/sublime.mp4" type="video/mp4" >
+      <source src="/static/videos/video1.mp4" type="video/mp4" >
         Your browser does not support the video tag.
     </video>
 </section> -->
+
 <section ng-controller="HomeController">
     <div class="img" style="position: fixed;">
-        <p class="writing">What we do?<br/>
+        <p class="writing" style="z-index:999;">What we do?<br/>
         {{text}}<span class="prompt">_</span> </p>
-        <img src="/static/img/coffee.png">
+        <!-- <div class="video">
+            <video class="col-xs-12" style="padding:0;" autoplay loop muted>
+              <source src="/static/videos/sublime.mp4" type="video/mp4" >
+                Your browser does not support the video tag.
+            </video>
+        </div> -->
+        <img src="/static/img/fondo1.png">
     </div>
 
-    <div class="layer">
+    <div id="tapa" class="layer">
         <div class="row text-center" style="position: relative; margin-bottom: 40px">
             <!-- <img ng-src="modules/core/client/img/brand/VerticastLogo.png"/> -->
-            <img ng-src="static/img/vm.jpg" style="width: 100%"/>
-            <p style="width: 100%;margin-top: -12%;position: absolute;font-size: 44px;font-family: CaviarDreams;">Servicio Tecnico Especializado</p>
-        </div>   
+            <img ng-src="static/img/logo2.png" style="width: 50%"/>
+            <!-- <p style="width: 100%;margin-top: -8%;position: absolute;font-size: 44px;font-family: CaviarDreams;">Shop Center</p> -->
+        </div>
+        <!-- Nuestra misión:
 
-        <div class="row text-center">
+Proporcionar la infraestructura de tecnología y estrategias de márketing digital para ayudar a pequeños y medianos comerciantes, que ofrecen productos y servicios a aprovechar la tecnología como medio para introducirse y competir en el mercado on-line, como así también aprovechar el poder de internet para captar, fidelizar nuevos y antiguos clientes de  sus comercios en su región.
+Nuestra estrategia está enfocada en el comercio local, computación en la nube, medios móviles y entretenimiento entre otras estrategias de innovación. -->
+        <div id="scroll1" class="row text-center">
+            <div class="row">
+                <h1>Presenta - Captura - Atrae - Vende - Fideliza</h1>
+            </div>
             <div class="col-sm-3">
             <div class="icon-box">
-                <i class="fa fa-cogs fa-round fa-4x text-theme circle glyphicon glyphicon-cog"></i>
-                <h3 class=" title-sm text-theme-sm text-theme">Reparación</h3>
-                <p class="text-theme-sm ">Cambio de Pantallas, Testeos, Software, Liberacion, Soldaduras, Pin de Carga, Sacamos Codigos.</p>
+                <i class="fa fa-cogs fa-round fa-4x text-theme circle glyphicon glyphicon-refresh"></i>
+                <h3 class=" title-sm text-theme-sm text-theme">Conectate</h3>
+                <p class="text-theme-sm ">Conecta el mundo digital online con tu tienda física fuera de línea a través de internet.
+Aprovecha la tecnología para conducir a tus clientes a tus tiendas físicas a través de información online como e-cupones, buscadores de productos, notificaciones geolocalizadas, ofertas inteligentes etc.</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+            <div class="icon-box">
+                <i class="fa fa-cogs fa-round fa-4x text-theme circle glyphicon glyphicon-user"></i>
+                <h3 class=" title-sm text-theme-sm text-theme">Presentate</h3>
+                <p class="text-theme-sm ">Muestra tus nuevas colecciones, tendencias, novedades, eventos y productos a toda tu comunidad.
+Diseña campañas de marketing, actívalas con la última tecnología y enamora a tus clientes.</p>
                 </div>
             </div>
             <div class="col-sm-3">
             <div class="icon-box">
                 <i class="fa fa-cogs fa-round fa-4x text-theme circle glyphicon glyphicon-shopping-cart"></i>
-                <h3 class=" title-sm text-theme-sm text-theme">Accesorios en Gral</h3>
-                <p class="text-theme-sm ">Films, Vidrios Templados, Fundas, Cargadores, Memorias, Pen Drive, Baterias.</p>
+                <h3 class=" title-sm text-theme-sm text-theme">Vendé</h3>
+                <p class="text-theme-sm ">Permite a tus clientes seleccionen qué productos son los que más les gustan y llévalos hacia tu tienda para que efectúen la compra, ahorrando así tiempo de atención al cliente y ofreciendo una mejor experiencia de compra.</p>
                 </div>
             </div>
             <div class="col-sm-3">
             <div class="icon-box">
-                <i class="fa fa-cogs fa-round fa-4x text-theme circle glyphicon glyphicon-globe"></i>
-                <h3 class=" title-sm text-theme-sm text-theme">Páginas Web</h3>
-                <p class="text-theme-sm ">Desarrollo de páginas y aplicaciones web, comenzando por el análisis de tu negocio para lograr una estrategía que logre sacarle el mayor provecho a tu sitio web.</p>
+                <i class="fa fa-cogs fa-4x text-theme circle glyphicon glyphicon-knight"></i>
+                <h3 class=" title-sm text-theme-sm text-theme">Fidelizá</h3>
+                <p class="text-theme-sm ">Premia a tus clientes por comprar y conocer tu tienda, compartirte entre sus amigos en redes sociales, agendarte como comercio amigo, visualizar tus productos etc. e incentivalos a que vuelvan a comprar.</p>
                 </div>
             </div>
-            <div class="col-sm-3">
-            <div class="icon-box">
-                <i class="fa fa-cogs fa-4x text-theme circle glyphicon glyphicon-phone"></i>
-                <h3 class=" title-sm text-theme-sm text-theme">Aplicaciones Móbiles</h3>
-                <p class="text-theme-sm ">Desarrollo de Apps personalizadas para tu empresa.</p>
+
+            <!-- ************************************ -->
+
+            <div id="scroll2" class="row col-md-12 text-justify">
+                <div class="col-md-6">
+                    <img src="/static/img/CHER.jpg">
+                </div>
+                <div class="col-md-6">
+                    <h1><strong>Nuestra visión</strong></h1>
+                    <h3>Construir una infraestructura de comercio que active y promueva tanto el  e-commerce local como la compra en la tienda física en cada pueblo, de cada provincia de cada país en Latinoamérica.</h3>
+                </div>
+
+            </div>
+            <div class="row col-md-12 text-justify">
+                <div class="col-md-6">
+                    <h1><strong>Comercio local</strong></h1>
+                    <h3>Ante la explosión del comercio electrónico en la región, por diversos motivos los pequeños y medianos comercios minoristas se han visto imposibilitados para competir contra las grandes marcas que han tomado el mercado online a nivel regional.
+Nos esforzamos para obtener una plataforma sólida y estable que sirva como base para retener a los potenciales compradores online cerca de los minoristas locales.</h3>
+                </div>
+                <div class="col-md-6">
+                    <img src="/static/img/COMPLOT.jpg">
                 </div>
             </div>
+            <div class="row col-md-12 text-justify">
+                <div class="col-md-6">
+                    <h1><strong>M-Commerce</strong></h1>
+                    <h3>En todo el mundo, el 40% de las transacciones comerciales por Internet se hacen a través del teléfono móvil y va en aumento.
+Estamos seguros de que este es el medio por el cual en un futuro se van a centralizar la totalidad de transacciones, por ello es que apostamos por este como canal principal para penetrar en el mercado online.</h3>
+                </div>
+                <div class="col-md-6">
+                    <img src="/static/img/VITAMINA.jpg">
+                </div>
+            </div>
+            <div class="row col-md-12 text-justify">
+                <div class="col-md-6">
+                    <img src="/static/img/RoyAlty.jpg">
+                </div>
+                <div class="col-md-6">
+                    <h1><strong>VIRTUAL WEB</strong></h1>
+                    <h3>Las aplicaciones de negocio evolucionan: han dejado de ser exclusivamente del tipo cliente–servidor con la necesidad de instalar la parte cliente en cada PC y luego mantenerla. Las nuevas versiones ya son web y corren desde nubes públicas en modo SaaS o directamente desde el data center de la propia organización.</h3>
+                </div>
+
+            </div>
+
         </div>
-        <div class="row contacto ">
+
+        <div id="contacto" class="row contacto ">
             <div class="col-md-3">
                 <h1>Contacto</h1>
                 <p>Para contactarnos o hacer preguntas no dudes en escribirnos tu consulta en el formulario de la derecha.</p>
             </div>
             <div class="col-md-9">
-                
+
                 <form name="articleForm" class="form-horizontal" ng-submit="create(articleForm.$valid)" novalidate>
                   <fieldset>
                     <div class="form-group" show-errors>
                       <label for="nombre">Nombre</label>
                       <input name="nombre" type="text" ng-model="nombre" id="nombre" class="form-control" placeholder="Su Nombre" >
-                     
+
                     </div>
                     <div class="form-group" show-errors>
                       <label for="email">e-mail</label>
@@ -93,13 +153,12 @@
         </div>
     </div>
 
-    
     <!--
     <div id="q" class="row text-center" style="background-color: azure; margin-top:20%;height:200px;">
-    </div> 
+    </div>
     <div class="row" style="background-color: azure; margin-top:2%; margin-bottom: 34%; height:200px;">
     </div> -->
-    
+
     <<!-- body  ng-app="ngAnimate" >
         <p class="CaviarDreams" style="color:black;">Click me:</p><input type="checkbox" ng-model="checked">
         <br/>

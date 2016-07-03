@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <base href="/">
-  <title>VM Servicio Técnico Especializado</title>
+  <title>Voker</title>
   <meta name="description" content="{{description}}">
   <meta name="fragment" content="!">
 
@@ -34,6 +34,8 @@
   <!-- Maps -->
   <link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
 
+  <!-- Fonts icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.css">
 
   <!-- Application CSS Files -->
   {% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">{% endfor %}
@@ -46,6 +48,7 @@
       {% block content %}{% endblock %}
     </section>
   </section>
+  <footer ng-include="'/modules/core/client/views/footer.client.view.html'"></footer>
 
   <!--Embedding The User Object-->
   <script type="text/javascript">

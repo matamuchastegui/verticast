@@ -60,11 +60,13 @@
     }
   }
 }
-/*.icon-box{
-  i:before{
-    color: #05D;
+.icon-box{
+  i{
+    @include transition(2s);
+    color: black;
+    background-color: white;
   }
-}*/
+}
 .icon-box:hover{
 
   i{
@@ -81,7 +83,6 @@
   color:white;
   margin-top: 50px;
   padding: 2%;
-  padding-bottom: 15%;
 }
 .row.text-justify{
   border-top: solid #555 1px;
@@ -97,4 +98,116 @@ header{
   a{
     opacity: 1;
   }
+}
+footer{
+  clear: both;
+  position: relative;
+  margin-top: 58%;
+  .social{
+    @include transition(2s);
+    height: 80px;
+    .col-md-2{
+      padding: 1%;
+      margin-top: 5px;
+    }
+    a{
+      color:black;
+      text-decoration: none;
+    }
+    #facebook{
+      @include transition(2s);
+      padding: 1%;
+      .icon-social-facebook:before{
+        @include transition(2s);
+        border-radius: 0;
+        font-size: 50px;
+        background:none;
+        border:none;
+      }
+    }
+    #twitter{
+      @include transition(2s);
+      padding: 1%;
+      .icon-social-twitter:before{
+        @include transition(2s);
+        border-radius: 0;
+        font-size: 50px;
+        background:none;
+        border:none;
+      }
+    }
+    #skype{
+      @include transition(2s);
+      padding: 1%;
+      .icon-social-skype:before{
+        @include transition(2s);
+        border-radius: 0;
+        font-size: 50px;
+        background:none;
+        border:none;
+      }
+    }
+    #linkedin{
+      @include transition(2s);
+      padding: 1%;
+      .icon-social-linkedin:before{
+        @include transition(2s);
+        border-radius: 0;
+        font-size: 50px;
+        background:none;
+        border:none;
+      }
+    }
+  }
+
+  #facebook:hover{
+    @include transition(.5s);
+    padding: 0;
+    .icon-social-facebook:before{
+      @include transition(1s);
+      border: 0 solid #3b5998;
+      border-radius: 15%;
+      background:#3b5998;
+      color:white;
+      font-size: 60px;
+    }
+  }
+  #twitter:hover{
+    @include transition(.5s);
+    padding: 0;
+    .icon-social-twitter:before{
+      @include transition(1s);
+      border: 0 solid #55acee;
+      border-radius: 25%;
+      background:#55acee;
+      color:white;
+      font-size: 60px;
+    }
+  }
+  #skype:hover{
+    @include transition(.5s);
+    padding: 0;
+    .icon-social-skype:before{
+      @include transition(1s);
+      border: 0 solid #12A5F4;
+      border-radius: 15%;
+      background:#12A5F4;
+      color:white;
+      font-size: 60px;
+    }
+  }
+  #linkedin:hover{
+    @include transition(.5s);
+    padding: 0;
+    .icon-social-linkedin:before{
+      @include transition(1s);
+      border: 2px solid #007bb5;
+      background:#007bb5;
+      color:white;
+      font-size: 60px;
+    }
+  }
+}
+.mt50{
+  margin-top: 50px;
 }

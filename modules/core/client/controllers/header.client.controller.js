@@ -8,7 +8,6 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', '$doc
 
     // Get the topbar menu
     $scope.menu = Menus.getMenu('topbar');
-
     // Toggle the menu items
     $scope.isCollapsed = false;
     $scope.toggleCollapsibleMenu = function () {
@@ -28,6 +27,5 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', '$doc
       var someElement = angular.element(document.getElementById(item));
       $document.scrollToElement(someElement, 50, 1000);
     };
-
   }
-]).value('duScrollBottomSpy', true);
+]);

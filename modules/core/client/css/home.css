@@ -41,11 +41,12 @@
       -webkit-animation: fadeinphoto 1s 0.5s infinite;
       -o-animation: fadeinphoto 1s 0.5s infinite; }
 
-/*.icon-box{
-  i:before{
-    color: #05D;
-  }
-}*/
+.icon-box i {
+  -webkit-transition: 2s;
+  transition: 2s;
+  color: black;
+  background-color: white; }
+
 .icon-box:hover i {
   -webkit-transition: 2s;
   transition: 2s;
@@ -60,8 +61,7 @@
   background: #434a75;
   color: white;
   margin-top: 50px;
-  padding: 2%;
-  padding-bottom: 15%; }
+  padding: 2%; }
 
 .row.text-justify {
   border-top: solid #555 1px;
@@ -75,3 +75,112 @@ header {
   border: none !important; }
   header a {
     opacity: 1; }
+
+footer {
+  clear: both;
+  position: relative;
+  margin-top: 58%; }
+  footer .social {
+    -webkit-transition: 2s;
+    transition: 2s;
+    height: 80px; }
+    footer .social .col-md-2 {
+      padding: 1%;
+      margin-top: 5px; }
+    footer .social a {
+      color: black;
+      text-decoration: none; }
+    footer .social #facebook {
+      -webkit-transition: 2s;
+      transition: 2s;
+      padding: 1%; }
+      footer .social #facebook .icon-social-facebook:before {
+        -webkit-transition: 2s;
+        transition: 2s;
+        border-radius: 0;
+        font-size: 50px;
+        background: none;
+        border: none; }
+    footer .social #twitter {
+      -webkit-transition: 2s;
+      transition: 2s;
+      padding: 1%; }
+      footer .social #twitter .icon-social-twitter:before {
+        -webkit-transition: 2s;
+        transition: 2s;
+        border-radius: 0;
+        font-size: 50px;
+        background: none;
+        border: none; }
+    footer .social #skype {
+      -webkit-transition: 2s;
+      transition: 2s;
+      padding: 1%; }
+      footer .social #skype .icon-social-skype:before {
+        -webkit-transition: 2s;
+        transition: 2s;
+        border-radius: 0;
+        font-size: 50px;
+        background: none;
+        border: none; }
+    footer .social #linkedin {
+      -webkit-transition: 2s;
+      transition: 2s;
+      padding: 1%; }
+      footer .social #linkedin .icon-social-linkedin:before {
+        -webkit-transition: 2s;
+        transition: 2s;
+        border-radius: 0;
+        font-size: 50px;
+        background: none;
+        border: none; }
+  footer #facebook:hover {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 0; }
+    footer #facebook:hover .icon-social-facebook:before {
+      -webkit-transition: 1s;
+      transition: 1s;
+      border: 0 solid #3b5998;
+      border-radius: 15%;
+      background: #3b5998;
+      color: white;
+      font-size: 60px; }
+  footer #twitter:hover {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 0; }
+    footer #twitter:hover .icon-social-twitter:before {
+      -webkit-transition: 1s;
+      transition: 1s;
+      border: 0 solid #55acee;
+      border-radius: 25%;
+      background: #55acee;
+      color: white;
+      font-size: 60px; }
+  footer #skype:hover {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 0; }
+    footer #skype:hover .icon-social-skype:before {
+      -webkit-transition: 1s;
+      transition: 1s;
+      border: 0 solid #12A5F4;
+      border-radius: 15%;
+      background: #12A5F4;
+      color: white;
+      font-size: 60px; }
+  footer #linkedin:hover {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 0; }
+    footer #linkedin:hover .icon-social-linkedin:before {
+      -webkit-transition: 1s;
+      transition: 1s;
+      border: 2px solid #007bb5;
+      background: #007bb5;
+      color: white;
+      font-size: 60px; }
+
+.mt50 {
+  margin-top: 50px; }
